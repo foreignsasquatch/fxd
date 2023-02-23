@@ -13,6 +13,13 @@ class Assets {
         textures.set(na, t);
       }
 
+      if(StringTools.contains(v, ".png")) {
+        var n = v.split(".")[0];
+        var na = n.split("/")[1];
+        var f = Rl.loadTexture(v);
+        textures.set(na, f);
+      }
+
       if(StringTools.contains(v, ".ttf")) {
         var n = v.split(".")[0];
         var na = n.split("/")[1];
